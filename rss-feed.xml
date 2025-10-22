@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Convertify - Size Conversion Tools</title>
+        <link>https://ssujit905.github.io/convertify/</link>
+        <description>Latest updates and new features from Convertify - Free online size conversion tools</description>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 01 Dec 2025 10:00:00 GMT</lastBuildDate>
+        <atom:link href="https://ssujit905.github.io/convertify/rss-feed.xml" rel="self" type="application/rss+xml"/>
+        <image>
+            <url>https://ssujit905.github.io/convertify/assets/images/icon.png</url>
+            <title>Convertify - Size Conversion Tools</title>
+            <link>https://ssujit905.github.io/convertify/</link>
+        </image>
+
+        <!-- Current Tools -->
+        <item>
+            <title>New Shoe Size Converter Launched</title>
+            <link>https://ssujit905.github.io/convertify/shoe-size-converter.html</link>
+            <description>Convert between US, EU, UK shoe sizes instantly with our new accurate conversion tool. Features printable charts and mobile optimization.</description>
+            <pubDate>Mon, 01 Dec 2025 09:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://ssujit905.github.io/convertify/shoe-size-converter.html</guid>
+        </item>
+
+        <!-- Privacy Policy -->
+        <item>
+            <title>Privacy Policy Updated</title>
+            <link>https://ssujit905.github.io/convertify/privacy.html</link>
+            <description>Read our updated privacy policy to understand how we protect your data and ensure your privacy while using Convertify tools.</description>
+            <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://ssujit905.github.io/convertify/privacy.html</guid>
+        </item>
+
+        <!-- Contact Page -->
+        <item>
+            <title>Contact Convertify</title>
+            <link>https://ssujit905.github.io/convertify/contact.html</link>
+            <description>Have questions or feedback? Contact the Convertify team for support and suggestions about our size conversion tools.</description>
+            <pubDate>Mon, 01 Dec 2025 07:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://ssujit905.github.io/convertify/contact.html</guid>
+        </item>
+
+        <!-- Future Updates (Placeholders) -->
+        <item>
+            <title>Length Converter Coming Soon</title>
+            <link>https://ssujit905.github.io/convertify/</link>
+            <description>We're working on a new length conversion tool to convert between inches, cm, feet, meters and more. Stay tuned for updates!</description>
+            <pubDate>Sun, 30 Nov 2025 10:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://ssujit905.github.io/convertify/#length-converter</guid>
+        </item>
+
+        <item>
+            <title>Clothing Size Converter in Development</title>
+            <link>https://ssujit905.github.io/convertify/</link>
+            <description>Our team is developing a comprehensive clothing size converter for international size conversions. Expected launch in early 2025.</description>
+            <pubDate>Sat, 29 Nov 2025 10:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://ssujit905.github.io/convertify/#clothing-converter</guid>
+        </item>
+
+    </channel>
+</rss>
