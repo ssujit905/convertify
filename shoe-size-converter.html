@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Shoe Size Conversion Chart - Convert US, EU, UK Sizes | Convertify</title>
+    <meta name="description" content="Free shoe size conversion tool by Convertify. Convert between US, EU, UK sizes instantly with 99% accuracy. Printable charts for men, women, and kids. Trusted worldwide.">
+    <meta name="keywords" content="shoe size conversion, size conversion shoe chart, EU to US shoe size, UK to US shoe size, mens to womens shoe conversion, shoe size converter, international shoe size">
+    <meta name="author" content="Convertify">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/convertify/shoe-size-converter.html">
+    <meta property="og:title" content="Shoe Size Conversion Chart - Convert US, EU, UK Sizes | Convertify">
+    <meta property="og:description" content="Free shoe size conversion tool by Convertify. Convert between US, EU, UK sizes instantly with printable charts.">
+    <meta property="og:image" content="assets/images/og-shoe-converter.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Shoe Size Conversion Chart - Free Online Converter | Convertify">
+    <meta property="twitter:description" content="Convert shoe sizes between US, EU, UK standards instantly with Convertify. Accurate and free.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourusername.github.io/convertify/shoe-size-converter.html">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowToTool",
+      "name": "Convertify Shoe Size Converter",
+      "description": "Convert shoe sizes between international standards using Convertify's accurate conversion tool",
+      "url": "https://yourusername.github.io/convertify/shoe-size-converter.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Convertify",
+        "url": "https://yourusername.github.io/convertify/"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Enter your shoe size",
+          "text": "Input your current shoe size and select the size system (US, EU, UK, etc.)"
+        },
+        {
+          "@type": "HowToStep", 
+          "name": "Select target system",
+          "text": "Choose the size system you want to convert to"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Get instant results",
+          "text": "Convertify instantly shows converted sizes across all major systems with printable charts"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <div class="brand-icon">📐</div>
+                    <span class="brand-text">Convertify</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shoe-size-converter.html" class="nav-link active">Shoe Converter</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Converter -->
+    <main class="converter-container">
+        <div class="converter-hero">
+            <h1 class="converter-title">👟 Shoe Size Converter</h1>
+            <p class="converter-subtitle">Convertify's accurate tool for converting between international shoe sizes instantly</p>
+        </div>
+
+        <div class="converter-card">
+            <div class="converter-form">
+                <div class="form-group">
+                    <label for="shoeSize" class="form-label">Your Size</label>
+                    <input type="number" id="shoeSize" class="form-input" placeholder="Enter size" step="0.5" min="1" max="50">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fromSystem" class="form-label">From</label>
+                    <select id="fromSystem" class="form-select">
+                        <option value="US">US Men</option>
+                        <option value="US_W">US Women</option>
+                        <option value="EU">EU</option>
+                        <option value="UK">UK</option>
+                        <option value="CM">CM</option>
+                    </select>
+                </div>
+                
+                <div class="convert-arrow">→</div>
+                
+                <div class="form-group">
+                    <label for="toSystem" class="form-label">To</label>
+                    <select id="toSystem" class="form-select">
+                        <option value="EU">EU</option>
+                        <option value="US">US Men</option>
+                        <option value="US_W">US Women</option>
+                        <option value="UK">UK</option>
+                        <option value="CM">CM</option>
+                    </select>
+                </div>
+                
+                <button onclick="convertShoeSize()" class="btn btn-primary convert-btn">
+                    Convert Size
+                </button>
+            </div>
+            
+            <!-- Quick Convert Buttons -->
+            <div class="quick-convert">
+                <h3>Popular Conversions:</h3>
+                <div class="quick-buttons">
+                    <button onclick="quickConvert('EU', 'US')" class="btn btn-outline">EU → US</button>
+                    <button onclick="quickConvert('US', 'EU')" class="btn btn-outline">US → EU</button>
+                    <button onclick="quickConvert('UK', 'US')" class="btn btn-outline">UK → US</button>
+                    <button onclick="quickConvert('US_W', 'US')" class="btn btn-outline">Women's → Men's</button>
+                </div>
+            </div>
+            
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section" style="display: none;">
+                <h3>Conversion Results</h3>
+                <div class="results-grid" id="resultsGrid">
+                    <!-- Results populated by JavaScript -->
+                </div>
+                <button onclick="utils.copyToClipboard(document.getElementById('resultsGrid').innerText)" class="btn btn-outline copy-btn">
+                    📋 Copy Results
+                </button>
+            </div>
+        </div>
+
+        <!-- Printable Charts Section -->
+        <div class="charts-section">
+            <div class="section-header">
+                <h2>📊 Printable Size Charts</h2>
+                <p>Convertify's comprehensive conversion charts for quick reference</p>
+            </div>
+            
+            <div class="chart-tabs">
+                <button class="chart-tab active" onclick="openChartTab('men')">Men's Sizes</button>
+                <button class="chart-tab" onclick="openChartTab('women')">Women's Sizes</button>
+                <button class="chart-tab" onclick="openChartTab('kids')">Kids' Sizes</button>
+            </div>
+            
+            <div class="chart-content">
+                <div id="menChart" class="chart-pane active">
+                    <div class="printable-section">
+                        <div class="chart-header">
+                            <h3>Men's Shoe Size Conversion Chart</h3>
+                            <button onclick="window.print()" class="btn btn-outline">🖨️ Print Chart</button>
+                        </div>
+                        <table class="conversion-table">
+                            <thead>
+                                <tr>
+                                    <th>US</th>
+                                    <th>EU</th>
+                                    <th>UK</th>
+                                    <th>CM</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mensChartBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="womenChart" class="chart-pane">
+                    <div class="printable-section">
+                        <div class="chart-header">
+                            <h3>Women's Shoe Size Conversion Chart</h3>
+                            <button onclick="window.print()" class="btn btn-outline">🖨️ Print Chart</button>
+                        </div>
+                        <table class="conversion-table">
+                            <thead>
+                                <tr>
+                                    <th>US</th>
+                                    <th>EU</th>
+                                    <th>UK</th>
+                                    <th>CM</th>
+                                </tr>
+                            </thead>
+                            <tbody id="womensChartBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="kidsChart" class="chart-pane">
+                    <div class="printable-section">
+                        <div class="chart-header">
+                            <h3>Kids' Shoe Size Conversion Chart</h3>
+                            <button onclick="window.print()" class="btn btn-outline">🖨️ Print Chart</button>
+                        </div>
+                        <table class="conversion-table">
+                            <thead>
+                                <tr>
+                                    <th>US</th>
+                                    <th>EU</th>
+                                    <th>UK</th>
+                                    <th>CM</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody id="kidsChartBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <div class="section-header">
+                <h2>❓ Frequently Asked Questions</h2>
+                <p>Everything you need to know about shoe size conversion</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How accurate is Convertify's shoe size converter?</h3>
+                    <p>Convertify uses industry-standard conversion tables and is 99% accurate for most major brands. We continuously update our data to ensure reliability across different shoe manufacturers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's the difference between US Men and US Women sizes?</h3>
+                    <p>Typically, US women's sizes are 1.5-2 sizes larger than men's. For example, a men's US 8 equals a women's US 9.5. Convertify automatically handles this conversion accurately.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I measure my foot for accurate conversion?</h3>
+                    <p>Stand on paper, mark your heel and longest toe, measure the distance in centimeters. Use this CM measurement with Convertify for the most precise size conversion.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Which countries use which sizing systems?</h3>
+                    <p>US/Canada use US sizing, Europe uses EU, UK/Australia use UK sizing. Convertify supports conversion between all major international sizing standards.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-icon">📐</div>
+                    <span class="brand-text">Convertify</span>
+                    <p>Your trusted partner for accurate size conversions worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Tools</h4>
+                        <ul>
+                            <li><a href="shoe-size-converter.html">Shoe Size Converter</a></li>
+                            <li><a href="#" class="coming-soon">Length Converter <span>Soon</span></a></li>
+                            <li><a href="#" class="coming-soon">Clothing Converter <span>Soon</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">How to Measure</a></li>
+                            <li><a href="#">Size Guides</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Convertify. Free to use. Part of our mission to make size conversion accessible to everyone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/shoe-converter.js"></script>
+</body>
+</html>
